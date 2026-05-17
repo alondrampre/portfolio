@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#EFE9DE">
+    <title>Son Cosas Podcast — Identity. — Alondra Márquez</title>
+    <link rel="icon" type="image/png" href="favicon.png?v=3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific styles for the project page template */
+        body {
+            background: var(--cream);
+        }
+
+        .project-hero {
+            padding: 12rem 3rem 4rem 3rem;
+            min-height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            border-bottom: 1px solid var(--i15);
+        }
+
+        .ph-meta {
+            font-size: .58rem;
+            letter-spacing: .25em;
+            text-transform: uppercase;
+            color: var(--i50);
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .ph-meta span {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .ph-meta span::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--red);
+            margin-right: .5rem;
+        }
+
+        .ph-title {
+            font-family: var(--fd);
+            font-weight: 700;
+            font-size: clamp(3rem, 7vw, 6rem);
+            line-height: 0.95;
+            letter-spacing: -.02em;
+            color: var(--ink);
+            margin-bottom: 2rem;
+            max-width: 1400px;
+        }
+
+        .ph-title em {
+            font-style: normal;
+            color: var(--red);
+        }
+
+        .ph-desc {
+            font-family: var(--fb);
+            font-weight: 400;
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: var(--i50);
+            max-width: 60ch;
+            margin-bottom: 3rem;
+        }
+
+        .project-content {
+            padding: 0;
+            max-width: 100%;
+            margin: 0;
+        }
+
+        .pg {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .pg-img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 0;
+            background: var(--cream2);
+            /* Object fit cover handles diverse aspect ratios well if we apply a height */
+        }
+
+        .project-nav-bottom {
+            padding: 5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--i06);
+            background: var(--cream);
+        }
+
+        .pnb-link {
+            font-family: var(--fd);
+            font-weight: 500;
+            font-size: 2rem;
+            color: var(--ink);
+            text-decoration: none;
+            transition: color .2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .pnb-link:hover {
+            color: var(--red);
+        }
+
+        .pnb-link span {
+            font-size: 1.5rem;
+            transition: transform .2s;
+        }
+
+        .pnb-link.prev:hover span { transform: translateX(-8px); }
+        .pnb-link.next:hover span { transform: translateX(8px); }
+        .pnb-link.home:hover span { transform: translateY(-4px); }
+
+        @media (max-width: 860px) {
+            .project-hero {
+                padding: 8rem 1.5rem 3rem 1.5rem;
+            }
+            .project-content {
+                padding: 0;
+            }
+            .project-nav-bottom {
+                padding: 3rem 1.5rem;
+                flex-direction: column;
+                gap: 2rem;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="cur"></div>
+
+    <nav class="desktop-nav nav-scrolled">
+        <a href="index.html" class="nav-logo" style="text-decoration: none; color: inherit;">← Back to Home</a>
+        <span class="nav-center">PROJECT OVERVIEW</span>
+        <ul class="nav-links">
+            <li><a href="mailto:alondrampre@gmail.com">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="project-hero rv">
+        <div class="ph-meta">
+            <span>2021</span>
+            <span>Branding</span>
+            <span>Social Media</span>
+            <span>Logo</span>
+        </div>
+        <h1 class="ph-title">Son Cosas Podcast — <em>Identity.</em></h1>
+        <p class="ph-desc">Complete visual identity and digital branding system for a contemporary podcast, establishing a cohesive look across social media and digital platforms.</p>
+    </section>
+
+    <section class="project-content">
+        <div class="pg">
+            <video src="assets/soncosas1.mp4" class="pg-img rv" autoplay muted playsinline></video>
+            <img src="assets/soncosas2.png" alt="Son Cosas Podcast 2" class="pg-img rv">
+            <video src="assets/soncosas3.mp4" class="pg-img rv" autoplay muted playsinline></video>
+        </div>
+    </section>
+
+    <div class="project-nav-bottom rv">
+        <a href="21together.html" class="pnb-link prev"><span>←</span> Previous Project</a>
+        <a href="index.html" class="pnb-link home"><span>↑</span> Back to Home</a>
+        <a href="morfologia.html" class="pnb-link next">Next Project <span>→</span></a>
+    </div>
+
+    <footer>
+        <span class="f-name">Alondra Márquez</span>
+        <span class="f-copy">© 2026 — GBA, Argentina — Graphic & UI Designer</span>
+    </footer>
+
+    <!-- MOBILE NAVIGATION BOTTOM -->
+    <nav class="mobile-nav">
+        <ul class="mobile-nav-list">
+            <li>
+                <a href="index.html">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="active">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    <span>Info</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <script>
+        /* cursor */
+        const cur = document.getElementById('cur');
+        if (window.innerWidth > 860) {
+            let mx = 0, my = 0;
+            document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+            (function loop() { cur.style.left = mx + 'px'; cur.style.top = my + 'px'; requestAnimationFrame(loop); })();
+        } else {
+            cur.style.display = 'none';
+        }
+
+        /* reveal */
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+        }, { threshold: .07 });
+        document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+    </script>
+</body>
+
+</html>
