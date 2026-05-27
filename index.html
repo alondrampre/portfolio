@@ -707,6 +707,8 @@
                     setTimeout(typeNext, 40 + Math.random() * 40);
                 } else {
                     cursor.style.opacity = '1'; /* Ensure it stays blinking */
+                    const subtitle = document.querySelector('.hero-light-text');
+                    if (subtitle) subtitle.classList.add('start-wipe');
                 }
             }
 
