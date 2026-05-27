@@ -275,7 +275,7 @@
         }
 
         .hero-light-text {
-            display: block;
+            display: inline-block; /* Changed from block to inline-block for precise masking */
             font-family: var(--fd);
             font-weight: 100;
             font-size: clamp(2.5rem, 6.5vw, 6.8rem);
@@ -283,6 +283,20 @@
             letter-spacing: -0.03em;
             color: var(--red);
             margin-top: 0.6rem;
+            
+            /* Wipe Mask Reveal */
+            clip-path: inset(0 100% 0 0);
+            animation: wipeRevealAnim 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+            animation-delay: 0.9s;
+        }
+
+        @keyframes wipeRevealAnim {
+            0% {
+                clip-path: inset(0 100% 0 0);
+            }
+            100% {
+                clip-path: inset(0 0 0 0);
+            }
         }
 
         .hero-meta-desc {
