@@ -1283,6 +1283,15 @@
             color: var(--red);
         }
 
+        /* Line break visibility — desktop default */
+        .br-mobile {
+            display: none;
+        }
+
+        .br-desktop {
+            display: inline;
+        }
+
         /* RESPONSIVE */
         @media (max-width: 860px) {
             body {
@@ -1306,6 +1315,20 @@
 
             .hero {
                 padding: 0 1.5rem;
+            }
+
+            /* Mobile line breaks */
+            .br-mobile {
+                display: inline;
+            }
+
+            .br-desktop {
+                display: none;
+            }
+
+            /* Heavier subtitle on mobile */
+            .hero-light-text {
+                font-weight: 400 !important;
             }
 
             .s-hdr {
