@@ -153,94 +153,31 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
-            text-align: center;
+            align-items: flex-start;
+            text-align: left;
             position: relative;
             z-index: 2;
-            padding-top: 12vh;
         }
 
         .hero-title-block {
             text-transform: uppercase;
-            margin-bottom: 2.5rem;
-            max-width: 1400px;
+            width: 100%;
         }
 
         .hero-bold-text {
             display: block;
-            font-family: "acumin-pro-extra-condensed", sans-serif;
+            font-family: "dharma-gothic-c", sans-serif;
             font-weight: 600;
             font-style: normal;
-            font-size: clamp(4rem, 11vw, 13rem);
-            line-height: 0.88;
+            font-size: clamp(6rem, 16.5vw, 19rem);
+            line-height: 0.85;
             color: var(--white);
             text-transform: uppercase;
-            letter-spacing: -0.01em;
-            transform: scaleY(1.4);
+            letter-spacing: normal;
+            font-kerning: normal;
             transform-origin: left top;
-            margin-bottom: 4rem;
-        }
-
-        /* Interletrado óptico — ajuste individual por glifo */
-        .hero-bold-text .k {
-            display: inline-block;
-        }
-
-        .hero-bold-text .k-G {
-            letter-spacing: 0.02em;
-        }
-
-        .hero-bold-text .k-R {
-            letter-spacing: 0.03em;
-        }
-
-        .hero-bold-text .k-A {
-            letter-spacing: 0.04em;
-        }
-
-        .hero-bold-text .k-P {
-            letter-spacing: 0.01em;
-        }
-
-        .hero-bold-text .k-H {
-            letter-spacing: -0.02em;
-        }
-
-        .hero-bold-text .k-I {
-            letter-spacing: -0.01em;
-        }
-
-        .hero-bold-text .k-C {
-            letter-spacing: 0.01em;
-        }
-
-        .hero-bold-text .k-space {
-            width: 0.28em;
-        }
-
-        .hero-bold-text .k-N {
-            letter-spacing: -0.01em;
-        }
-
-        .hero-bold-text .k-D {
-            letter-spacing: 0.01em;
-        }
-
-        .hero-bold-text .k-U {
-            letter-spacing: 0.02em;
-        }
-
-        .hero-bold-text .k-S {
-            letter-spacing: 0.02em;
-        }
-
-        .hero-bold-text .k-T {
-            letter-spacing: 0.05em;
-        }
-
-        .hero-bold-text .k-last {
-            letter-spacing: 0;
-        }
+            width: 100%;
+            /* Typewriter Cursor (unused in this block but kept if needed elsewhere) */       }
 
         /* Typewriter Cursor */
         .type-cursor {
@@ -266,16 +203,6 @@
             50% {
                 opacity: 0;
             }
-        }
-
-        .hero-bold-text .k {
-            display: inline-block;
-            opacity: 0;
-            transition: opacity 0s;
-        }
-
-        .hero-bold-text .k.visible {
-            opacity: 1;
         }
 
         .hero-light-text {
