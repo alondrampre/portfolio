@@ -168,15 +168,17 @@
 
         .hero-bold-text {
             display: block;
-            font-family: "owners-xxnarrow", sans-serif;
-            font-weight: 200;
+            font-family: "acumin-pro-extra-condensed", sans-serif;
+            font-weight: 600;
             font-style: normal;
-            font-size: clamp(4rem, 12vw, 12rem);
-            line-height: 0.88;
+            font-size: clamp(4rem, 11vw, 12rem);
+            line-height: 0.85;
             color: var(--white);
             text-transform: uppercase;
             letter-spacing: -0.01em;
-            margin-bottom: 1rem;
+            transform: scaleY(1.6);
+            transform-origin: left bottom;
+            margin-bottom: 3.5rem;
         }
 
         /* Interletrado óptico — ajuste individual por glifo */
