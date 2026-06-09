@@ -24,8 +24,11 @@
             scroll-behavior: smooth;
         }
 
+        html, body {
+            background: #000000;
+        }
+
         body {
-            background: var(--cream);
             color: var(--ink);
             font-family: var(--fb);
             font-weight: 400;
@@ -125,11 +128,11 @@
 
         /* HERO */
         .hero {
-            min-height: 100vh;
+            min-height: 100dvh;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding: 0 3rem;
+            padding: env(safe-area-inset-top) 3rem 0;
             background: #000000;
             position: relative;
             overflow: hidden;
@@ -156,7 +159,7 @@
             font-family: "dharma-gothic-c", sans-serif;
             font-weight: 600;
             font-style: normal;
-            font-size: clamp(6rem, 18.5vw, 22rem);
+            font-size: clamp(4rem, 14vw, 15rem);
             line-height: 0.78;
             color: var(--white);
             text-transform: uppercase;
@@ -171,24 +174,13 @@
             line-height: 0.75;
             position: relative;
             z-index: 10;
+            border: 2px solid #FFFFFF;
+            padding: 0 1vw 0.05em 1vw;
+            margin-left: 0.1em;
         }
 
         .magic-highlight .k {
-            color: var(--red);
-            padding-top: 0.05em;
-            padding-bottom: 0.05em;
-        }
-
-        .magic-highlight .k.visible {
-            background-color: var(--white);
-        }
-
-        .magic-highlight .k:first-child {
-            padding-left: 1vw;
-        }
-
-        .magic-highlight .k:last-child {
-            padding-right: 1vw;
+            color: #E040FB;
         }
 
         /* Typewriter Cursor */
@@ -1267,8 +1259,15 @@
             }
 
             .hero {
-                padding: 0 1.5rem;
-            }
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: env(safe-area-inset-top) 3rem 0;
+            background: #000000;
+            position: relative;
+            overflow: hidden;
+        }
 
             /* Mobile line breaks */
             .br-mobile {
@@ -1372,3 +1371,5 @@
                 display: block;
             }
         }
+
+
