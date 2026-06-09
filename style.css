@@ -168,13 +168,13 @@
 
         .magic-highlight {
             display: inline-block;
-            line-height: 0.75;
+            line-height: inherit;
             position: relative;
             z-index: 10;
         }
 
         .magic-highlight .k {
-            color: #E040FB;
+            color: var(--red);
             padding-top: 0.05em;
             padding-bottom: 0.05em;
         }
@@ -234,7 +234,7 @@
             font-size: clamp(2.5rem, 6.5vw, 6.8rem);
             line-height: 0.85;
             letter-spacing: -0.03em;
-            color: #E040FB;
+            color: var(--red);
             margin-top: 0.6rem;
             
             /* Wipe Mask Reveal */
@@ -399,7 +399,7 @@
         .s-heading em {
             font-style: normal;
             font-weight: 700;
-            color: #E040FB;
+            color: var(--red);
             position: relative;
             display: inline-block;
         }
@@ -497,7 +497,7 @@
             font-size: .56rem;
             letter-spacing: .25em;
             text-transform: uppercase;
-            color: #E040FB;
+            color: var(--red);
             margin-bottom: .8rem;
             padding-bottom: .45rem;
             border-bottom: 1px solid var(--i06);
@@ -543,7 +543,7 @@
         }
 
         .work .s-heading em {
-            color: #E040FB;
+            color: var(--red);
         }
 
         .pt-hdr,
@@ -633,7 +633,7 @@
 
         .pt-arrow {
             font-size: .92rem;
-            color: #E040FB;
+            color: var(--red);
             opacity: 0;
             transform: translateX(-4px);
             transition: opacity .2s, transform .2s;
@@ -704,7 +704,7 @@
         .fc-title em {
             font-style: normal;
             font-weight: 700;
-            color: #E040FB;
+            color: var(--red);
         }
 
         .fc-desc {
@@ -733,7 +733,7 @@
         }
 
         .fc-link:hover {
-            color: #E040FB;
+            color: var(--red);
             padding-left: 0.25rem;
         }
 
@@ -834,7 +834,7 @@
         .fc-counter {
             font-family: var(--fd);
             font-size: .85rem;
-            color: #E040FB;
+            color: var(--red);
             letter-spacing: 0.1em;
             font-weight: 600;
         }
@@ -872,7 +872,7 @@
             font-family: var(--fb);
             font-weight: 500;
             font-size: .82rem;
-            color: #E040FB;
+            color: var(--red);
             line-height: 1.5;
             padding-top: .2rem;
         }
@@ -912,7 +912,7 @@
         }
 
         .skills .s-heading em {
-            color: #E040FB;
+            color: var(--red);
         }
 
         .skills .s-label {
@@ -957,7 +957,7 @@
             font-size: .52rem;
             letter-spacing: .25em;
             text-transform: uppercase;
-            color: #E040FB;
+            color: var(--red);
             margin-bottom: 1rem;
             font-weight: 500;
         }
@@ -1004,7 +1004,7 @@
         .contact-cta em {
             font-style: normal;
             font-weight: 700;
-            color: #E040FB;
+            color: var(--red);
             position: relative;
             display: inline-block;
         }
@@ -1119,12 +1119,12 @@
         }
 
         .c-link:hover .c-val {
-            color: #E040FB;
+            color: var(--red);
         }
 
         .c-arr {
             font-size: .92rem;
-            color: #E040FB;
+            color: var(--red);
             opacity: 0;
             transform: translateX(-4px);
             transition: opacity .18s, transform .18s;
@@ -1233,7 +1233,7 @@
         }
 
         .mobile-nav-list a.active {
-            color: #E040FB;
+            color: var(--red);
         }
 
         /* Line break visibility — desktop default */
