@@ -790,7 +790,6 @@
         /* TYPEWRITER ANIMATION */
         window.addEventListener('DOMContentLoaded', () => {
             const container = document.querySelector('.hero-bold-text');
-            const lineParts = container.querySelectorAll('.line-part');
             
             function wrapLetters(node) {
                 if (node.nodeType === 3) {
@@ -817,37 +816,29 @@
             
             wrapLetters(container);
 
-            lineParts.forEach(line => {
-                if (window.getComputedStyle(line).display === 'none') {
-                    return;
-                }
-
-                const letters = line.querySelectorAll('.k');
-                if (letters.length === 0) return;
-
-                const cursor = document.createElement('span');
-                cursor.className = 'type-cursor';
-                line.appendChild(cursor);
-
-                let i = 0;
-                function typeNext() {
-                    if (i < letters.length) {
-                        letters[i].classList.add('visible');
-                        letters[i].after(cursor);
-                        i++;
-                        setTimeout(typeNext, 30);
-                    } else {
-                        const isLastLine = line.classList.contains('line-3');
-                        if (isLastLine) {
-                            cursor.style.opacity = '1';
-                        } else {
-                            cursor.remove();
-                        }
-                    }
-                }
-
-                setTimeout(typeNext, 800);
+            const letters = Array.from(container.querySelectorAll('.k')).filter(letter => {
+                return window.getComputedStyle(letter).display !== 'none';
             });
+
+            if (letters.length === 0) return;
+
+            const cursor = document.createElement('span');
+            cursor.className = 'type-cursor';
+            container.appendChild(cursor);
+
+            let i = 0;
+            function typeNext() {
+                if (i < letters.length) {
+                    letters[i].classList.add('visible');
+                    letters[i].after(cursor);
+                    i++;
+                    setTimeout(typeNext, 30);
+                } else {
+                    cursor.style.opacity = '1';
+                }
+            }
+
+            setTimeout(typeNext, 800);
         });
 
         /* THEME COLOR DYNAMICS */
