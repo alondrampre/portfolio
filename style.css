@@ -168,13 +168,13 @@
 
         .hero-bold-text {
             display: block;
-            font-family: var(--fd);
-            font-weight: 800;
-            font-size: clamp(2.5rem, 6vw, 6.2rem);
-            line-height: 0.95;
+            font-family: 'Saira Extra Condensed', sans-serif;
+            font-weight: 300;
+            font-size: clamp(4rem, 10vw, 10rem);
+            line-height: 0.88;
             color: var(--white);
-            /* Reset letter-spacing — optical kerning is applied per-span */
-            letter-spacing: 0;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
         }
 
         /* Interletrado óptico — ajuste individual por glifo */
