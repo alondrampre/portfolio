@@ -33,19 +33,7 @@
             cursor: none;
         }
 
-        /* CURSOR */
-        #cur {
-            position: fixed;
-            width: 8px;
-            height: 8px;
-            background: var(--red);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9999;
-            transform: translate(-50%, -50%);
-            transition: width .2s, height .2s;
-            mix-blend-mode: multiply;
-        }
+        /* Removed #cur styling */
 
         /* NAV GLOBAL — GLASSMORPHISM CON MIMETIZACIÓN HERO */
         .desktop-nav {
@@ -169,7 +157,7 @@
             font-family: "dharma-gothic-c", sans-serif;
             font-weight: 600;
             font-style: normal;
-            font-size: clamp(6rem, 16.5vw, 19rem);
+            font-size: clamp(6rem, 18.5vw, 22rem);
             line-height: 0.85;
             color: var(--white);
             text-transform: uppercase;
@@ -177,7 +165,17 @@
             font-kerning: normal;
             transform-origin: left top;
             width: 100%;
-            /* Typewriter Cursor (unused in this block but kept if needed elsewhere) */       }
+        }
+
+        .magic-highlight {
+            background-color: var(--white);
+            color: var(--red);
+            padding: 0 1vw;
+            display: inline-block;
+            line-height: 0.75;
+            position: relative;
+            z-index: 10;
+        }    /* Typewriter Cursor (unused in this block but kept if needed elsewhere) */       }
 
         /* Typewriter Cursor */
         .type-cursor {
@@ -203,6 +201,16 @@
             50% {
                 opacity: 0;
             }
+        }
+
+        .hero-bold-text .k {
+            display: inline-block;
+            opacity: 0;
+            transition: opacity 0s;
+        }
+
+        .hero-bold-text .k.visible {
+            opacity: 1;
         }
 
         .hero-light-text {

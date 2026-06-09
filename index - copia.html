@@ -14,8 +14,6 @@
 
 <body>
 
-    <div id="cur"></div>
-
     <nav class="desktop-nav">
         <a href="#" class="nav-logo" style="text-decoration: none; color: inherit;">Alondra Márquez</a>
         <span class="nav-center">GRAPHIC AND UI DESIGNER</span>
@@ -32,7 +30,7 @@
             <div class="hero-title-block rv">
                 <span class="hero-bold-text">
                     <span style="white-space: nowrap;">GIVE ME ANYTHING AND</span><br>
-                    <span style="white-space: nowrap;">I'LL GIVE YOU BACK <span style="color: var(--red);">MAGIC.</span></span>
+                    <span style="white-space: nowrap;">I'LL GIVE YOU BACK <span class="magic-highlight">MAGIC.</span></span>
                 </span>
             </div>
         </div>
@@ -532,11 +530,7 @@
     </nav>
 
     <script>
-        /* cursor */
-        const cur = document.getElementById('cur');
-        let mx = 0, my = 0;
-        document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-        (function loop() { cur.style.left = mx + 'px'; cur.style.top = my + 'px'; requestAnimationFrame(loop); })();
+        /* Removed custom cursor script */
 
         /* NAV — Glassmorphism scroll transition */
         const navEl = document.querySelector('.desktop-nav');
@@ -681,6 +675,29 @@
         /* TYPEWRITER ANIMATION */
         window.addEventListener('DOMContentLoaded', () => {
             const container = document.querySelector('.hero-bold-text');
+            
+            function wrapLetters(node) {
+                if (node.nodeType === 3) {
+                    const text = node.textContent;
+                    const fragment = document.createDocumentFragment();
+                    for(let char of text) {
+                        if(char === ' ' || char === '\n') {
+                            fragment.appendChild(document.createTextNode(char));
+                        } else {
+                            const span = document.createElement('span');
+                            span.className = 'k';
+                            span.textContent = char;
+                            fragment.appendChild(span);
+                        }
+                    }
+                    node.parentNode.replaceChild(fragment, node);
+                } else if (node.nodeType === 1) {
+                    Array.from(node.childNodes).forEach(wrapLetters);
+                }
+            }
+            
+            wrapLetters(container);
+
             const letters = container.querySelectorAll('.k');
             const cursor = document.createElement('span');
             cursor.className = 'type-cursor';
@@ -690,18 +707,11 @@
             function typeNext() {
                 if (i < letters.length) {
                     letters[i].classList.add('visible');
-                    // Move cursor after the letter, but handle line breaks
-                    if (letters[i].nextSibling && letters[i].nextSibling.nodeName === 'BR') {
-                        letters[i].nextSibling.after(cursor);
-                    } else {
-                        letters[i].after(cursor);
-                    }
+                    letters[i].after(cursor);
                     i++;
                     setTimeout(typeNext, 25 + Math.random() * 25);
                 } else {
-                    cursor.style.opacity = '1'; /* Ensure it stays blinking */
-                    const subtitle = document.querySelector('.hero-light-text');
-                    if (subtitle) subtitle.classList.add('start-wipe');
+                    cursor.style.opacity = '1';
                 }
             }
 
