@@ -157,10 +157,10 @@
             font-weight: 600;
             font-style: normal;
             font-size: clamp(6rem, 18.5vw, 22rem);
-            line-height: 0.85;
+            line-height: 0.78;
             color: var(--white);
             text-transform: uppercase;
-            letter-spacing: normal;
+            letter-spacing: -0.03em;
             font-kerning: normal;
             transform-origin: left top;
             width: 100%;
